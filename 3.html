@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zombiecho-모터의 종류</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><a href="index.html">Dr. Cho의 전기기기 생각해보기</a></h1>
+    <ol>
+      <li><a href="1.html">직관으로 때려 잡는 모터의 구동원리</a></li>
+      <li><a href="2.html">회전자계</a></li>
+      <li><a href="3.html">느낌으로만 살펴보는 모터의 종류와 구분</a></li>
+      <li><a href="4.html">CAE 팀 업무 소개</a></li>
+    </ol>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+  &nbsp; 아래에서 설명하는 내용은 <strong><font color="red">비전공자를 위한 모터의 구동 원리</font></strong>를 설명하기 위해 많은 의미의 <font color="red">생략</font>과 다소 억지스런 <font color="red">가정</font>이 포함되어 있으므로 실제 물리 현상과 다를 수 있음을 미리 말씀드립니다.
+
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+
+  <h2>Q. 모터의 종류는 어떻게 구분하나요?</h2>
+    <p>
+      &nbsp; 모터의 종류는 넓게는 전원 사용 방식을 시작으로 구조 및 컨셉 등으로 아주 다양하게 세분화 되어 있습니다.
+      <br> &nbsp; 물론 최근에는 인버터(Inverter) 기술이 낮은 가격으로 시장에 공급됨에 따라 사용 전원에 대한 구분 또한 옅어지고 있지만 말힙니다.
+      <br> &nbsp; 허면 왜 이렇게 다양하게 모터를 분류하였을까요? 심지어 최근에도 기존에 구분하지 않았던 구조 & 컨셉이 등장하면서 그 종류가 늘고 있습니다.
+      <br> &nbsp; 그 이유는 아직까지도 인류가 사용하는 전원 형태를 통일하지 못하였거나, 모터를 구성하는 금속 성분의 개발 양상과 가격이 끊임없이 변화고 있기 때문일 겁니다.
+      <br> &nbsp; 그것은 "시장의 요구" 이거나, "기술 발전의 필요" 라거나 어떠한 논리를 빌어 설명해도 그 함의는 결국 같습니다.
+      <br> &nbsp; 그럼 아래에 직접 분류 또는 구분된 형상을 보실까요?
+    </p>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot1.jpg"width="70%">
+       <figcaption><b>[모터의 종류와 구분]</b></figcaption>
+      </figure>
+    </p>
+
+    <p>
+      <br> &nbsp; 결국 모터는 본인의 직종에 따라 유연하게 구분하시면 됩니다. 저는 고객사가 요구하는 구조 & 컨셉에 따라 모터의 형상과 성능을 설계하여야 하므로 세분화된 분류에 익숙해져 있습니다.
+      <br> &nbsp; 어떤 이는 모터의 물리적 생산과 불량에 대한 관리를 수행함에 있어 회전자계 이용 방식 정도로만 대상물을 구분하고 판단하여 실무에 적용하고 있기도 합니다.
+      <br> &nbsp; 이처럼 본인의 관심도와 지적 호기심을 충족하기 위해 필요한 카테고리까지만 분류하여 사용하여도 무방하니 편안히 눈으로만 보고 지나가도록 합시다.
+    </p>
+
+  <p> &nbsp; </p>
+  <p> &nbsp; </p>
+
+  <h2>Q. 직류기(DC motor & generator)?</h2>
+
+    <p>
+      &nbsp; 직류기는 직류 전원을 입력으로 토크를 발생하는 모터와 동일한 구조에서 브러쉬(Brush)와 정류자편(Commutator)을 통해 정류된 전력을 생산하는 발전기를 통틀어 일컫습니다.
+      <br> &nbsp; 엄밀하게는 N, S극에서 발생하는 자력(Magnetic force)를 이용한 발전기는 직류 형태는 존재하지 않습니다. 이는 N, S극 자체가 교번하는 힘을 발생하기 때문으로, 한쪽 극성이 양(+)의 값을 가지는 전력을 생산하면 나머지 극성은 필연적으로 음(-)의 전력을 생산하기 때문이죠.
+      <br> &nbsp; 이를 직류기의 대표적인 특징인, 기구적인 전력 전달 구조인 브러쉬-정류자편의 조합으로 직류 전력 형태로 정류합니다. 이러한 직류기의 대표 특징인 <strong>기계적인 정류</strong>의 원리는 차차 알아가도록 합시다.
+    </p>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot2.jpg"width="70%">
+       <figcaption><b>[직류기]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+    <h2>Q. 유도기(Induction motor & generator)?</h2>
+
+    <p>
+      &nbsp; 유도기는 모터의 성능을 계산하고 예측해야하는 엔지니어의 입장에서 매우 까다로운 녀석입니다.
+      <br> &nbsp; 하지만 산업계 전반에 가장 많은 수량이 사용되고 있기도 합니다. 이러한 배경은 비교적 싸게 만들수 있으며 구동이 간단하다는 불편한 진실이 존재하기 때문입니다.
+      <br> &nbsp; 이같은 불편한 진실이란 다음과 같습니다.
+      <br> &nbsp; 첫째로, 싸게 만들수 있다는 사실은 영구자석 등과 같은 비싼 재질이 아닌 저렴한 알루미늄을 사용하여 토크를 발생할 수 있기 때문인데, 제조적으로 이를 구현할 때는 마치 쇳물을 녹여 틀에 붓는 방식과 같아지므로 여간 까다로운 것이 아닙니다.
+      <br> &nbsp; 둘째로, 구동이 간단하다는 사실은 제어기가 따로 필요 없이 국내 발전단에서 공급하는 60 [Hz]를 이용해 회전할 수 있기 때문입니다. 이러한 원리는 오래된 가전 제품들 중에 정속도로 운전했던 세탁기, 선풍기 등에 큰 장점이 되었습니다. 하지만 이와 같은 사실은 기술적으로는 부하변동에 따른 급격한 출력 변화로 이어지며 설계자들의 머리를 꽤 아프게 많들었던 것 또한 사실입니다.
+      <br> &nbsp; 유도기에서의 핵심 원리는 <strong>슬립(Slip)</strong>이라 부르는 고정자 자계와 회전자의 회전 속도 차이인데 이것도 차차 알아가도록 합시다.
+    </p>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot3.jpg"width="70%">
+       <figcaption><b>[유도기]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+    <h2>Q. 동기기(Synchronous motor & generator)?</h2>
+
+    <p>
+    &nbsp; 동기기는 최근에서야 가전, 차량 등을 비롯한 산업계 전반에 가장 법용적으로 적용되고 있는 녀석입니다.
+    <br> &nbsp; 이러한 배경은 동기기에 주력으로 사용되는 영구자석의 가격이 비교적 저렴해졌으며, 제어기술의 눈부신 발전으로 회전자의 실시간 위치 검출과 전류의 벡터제어 기술의 보편화된 보급으로 구동 성능 예측이 훨씬 정밀해지고 안정적으로 가능하기 때문입니다.
+    <br> &nbsp; 동기기에서 핵심 이슈는 <strong>회전자 위치와 전류의 위상</strong> 입니다. 이번 공유 주제에서는 늘 그렇들 나중에 차차 알아보도록 합시다.
+  </p>
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot4.jpg"width="70%">
+       <figcaption><b>[동기기]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+    <h2>Q. 눈으로만 구경하는 다양한 구조적인 특징</h2>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot5.jpg"width="70%">
+       <figcaption><b>[고정자 권선(winding)과 구조적 컨셉]</b></figcaption>
+      </figure>
+    </p>
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot6.jpg"width="70%">
+       <figcaption><b>[회전자 구조적 컨셉]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+    <h2>Q. 늘상 엔지니어를 따라 다니는 평범한 전자기적 이슈?</h2>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot7.jpg"width="70%">
+       <figcaption><b>[철심의 전자기적 이슈]</b></figcaption>
+      </figure>
+    </p>
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot8.jpg"width="70%">
+       <figcaption><b>[영구자석의 전자기적 이슈]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+    <h2>Q. 전자장 설계에서 모터 타입과 재질 선정의 의의는?</h2>
+
+    <p>
+      <figure>
+        <center>
+       <img src="Images/mot9.jpg"width="70%">
+       <figcaption><b>[비용과 성능]</b></figcaption>
+      </figure>
+    </p>
+
+    <p> &nbsp; </p>
+    <p> &nbsp; </p>
+
+
+
+
+
+</body>
+</html>
